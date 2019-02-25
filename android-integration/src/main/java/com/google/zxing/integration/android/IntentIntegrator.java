@@ -385,7 +385,7 @@ public class IntentIntegrator {
           // Otherwise, first option:
           packageName = targetApplications.get(0);
         }
-        Uri uri = Uri.parse("market://details?id=" + packageName);
+        Uri uri = Uri.parse("market://details?id=" + BSPLUS_PACKAGE);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         try {
           if (fragment == null) {
@@ -395,7 +395,7 @@ public class IntentIntegrator {
           }
         } catch (ActivityNotFoundException anfe) {
           // Hmm, market is not installed
-          Log.w(TAG, "Google Play is not installed; cannot install " + packageName);
+          Log.w(TAG, "Google Play is not installed; cannot install " + BSPLUS_PACKAGE);
         }
       }
     });
